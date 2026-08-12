@@ -1,0 +1,10 @@
+{
+  "name": "Waqtak",
+  "description": "A premium AI-powered productivity suite for managing tasks, goals, and time with advanced analytics and full Arabic/English support.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

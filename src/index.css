@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-cairo: 'Cairo', 'Plus Jakarta Sans', sans-serif;
+  }
+  body {
+    font-family: var(--font-cairo);
+  }
+}
+
+/* Custom scrollbar for modern feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.2);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.4);
+}
+
+/* Glowing AI pulse effect */
+@keyframes ai-pulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.25), 0 0 30px rgba(96, 165, 250, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(37, 99, 235, 0.45), 0 0 45px rgba(96, 165, 250, 0.3);
+  }
+}
+
+.ai-glow {
+  animation: ai-pulse 3s infinite ease-in-out;
+}
+
